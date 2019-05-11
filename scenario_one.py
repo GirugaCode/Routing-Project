@@ -9,16 +9,25 @@ and a single phone number. How quickly can you find the cost of calling this num
 # Output: Find the cost of calling that number
 # 
 def phone_route_cost_check(filename, number):
+    """
+    We saved performance when reading the file. We sorted each line into a string in an array.
+    The trade of is that it makes it slower to read the contents of the string.
+
+    The list gets smaller each recursion by taking out values that are not similar.
+
+    Best case scenario: 0.95 (seconds) O(n) [If the number is found in its entirety]
+    Worse case scenario: 18.70 (seonds) O(log(n)) [If the item is not matching even the first 2 numbers with any of the number on the list]
+    """
     open_file = open(filename, 'r')
-    data_array = open_file.read().split('\n')
+    data_array = open_file.read().split('\n') # O(n)
     # print(data_array)
-    phone_search(data_array, number)
+    phone_search(data_array, number) # O(log(n))
     open_file.close()
 
 def phone_search(array, number, recursion=5):
     new_array = []
 
-    for item in array:
+    for item in array: # O(n^2)
         current_number = ""
         cost = ""
         index = 0
@@ -52,7 +61,7 @@ def phone_search(array, number, recursion=5):
         # Return lowest cost
         costs_array = []
         # For each item in the new array: get all the costs and return the lowest value.
-        for item in new_array:
+        for item in new_array: # O(n^2)
             # print("current item:", item)
             count = 0
             for char in item:
