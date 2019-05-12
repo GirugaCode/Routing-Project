@@ -71,8 +71,8 @@ def get_number_price():
     """
     Credit: Shout out to Sarin Swift and Stephan Ouyang for their code for Scenario three. 
     Guided us on using binary search through a list of tuples.
-    We optimized the program by putting the list of tuples into a set.
-    O(n^2)
+    We optimized the program by putting the list of tuples into a set and handling five text files.
+
     Best Case Scenario: 52.0 (seconds) O(n^2) Where we iterate through the entire list of routing 
     numbers while always checking if it is not empty.
     """
