@@ -13,7 +13,7 @@ def phone_route_cost_check(route_file, number_file):
     a condition to only check if the recursive amount is under three digits
 
     Best Case scenario: 8.0 (seconds) O(n^2) where we iterated through both the dictionary and the dictionary keys
-    Worst Case scenario: 44.68 (seconds) O(n^3) where we iterate through the dictionary, phone numbers and do conduct
+    Worst Case scenario: 44.68 (seconds) O(n^2) where we iterate through the dictionary, phone numbers and do conduct
     a recursive call
 
     We could optimize the runtime by replacing the arrays with sets.

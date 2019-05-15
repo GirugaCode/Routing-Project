@@ -11,12 +11,12 @@ def file_to_array_of_tuple():
 
     Runtime: O(n) where n is all the route-costs 
     """
-    file_name_1 = open('text_files/route-costs-10.txt')
-    file_name_2 = open('text_files/route-costs-100.txt')
-    file_name_3 = open('text_files/route-costs-35000.txt')
-    file_name_4 = open('text_files/route-costs-10000000.txt')
-    file_name_5 = open('text_files/route-costs-600.txt')
-    all_files = [file_name_1,file_name_2,file_name_3, file_name_4, file_name_5]
+    route_cost_1 = open('text_files/route-costs-10.txt')
+    route_cost_2 = open('text_files/route-costs-100.txt')
+    route_cost_3 = open('text_files/route-costs-35000.txt')
+    route_cost_4 = open('text_files/route-costs-10000000.txt')
+    route_cost_5 = open('text_files/route-costs-600.txt')
+    all_files = [route_cost_1,route_cost_2,route_cost_3, route_cost_4, route_cost_5]
     all_array_tuples = []
     for file in all_files:
         array_of_numbers_and_cost = []
