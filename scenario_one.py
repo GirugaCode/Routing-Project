@@ -7,7 +7,12 @@ and a single phone number. How quickly can you find the cost of calling this num
 # Scenario One Pseudocode:
 # Given: Route-Costs of 100,000 numbers. One Phone Number
 # Output: Find the cost of calling that number
-# 
+"""
+IMPORTANT SIDE NOTE:
+For this scenario we can use built in tools in our text editor to solve this quickly. 
+We can just use the CMD+F tool to search how much one given number's route cost would be.
+Additionally, Me and Timofey wrote an iterative solution to the problem as well. Thank you!
+"""
 def phone_route_cost_check(filename, number):
     """
     We saved performance when reading the file. We sorted each line into a string in an array.
