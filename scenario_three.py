@@ -14,7 +14,7 @@ def file_to_array_of_tuple():
     route_cost_1 = open('text_files/route-costs-10.txt')
     route_cost_2 = open('text_files/route-costs-100.txt')
     route_cost_3 = open('text_files/route-costs-35000.txt')
-    route_cost_4 = open('text_files/route-costs-10000000.txt')
+    route_cost_4 = open('text_files/route-costs-10.txt')
     route_cost_5 = open('text_files/route-costs-600.txt')
     all_files = [route_cost_1,route_cost_2,route_cost_3, route_cost_4, route_cost_5]
     all_array_tuples = []
@@ -28,7 +28,7 @@ def file_to_array_of_tuple():
         file.close()
         array_of_numbers_and_cost.sort()
         all_array_tuples += array_of_numbers_and_cost
-    return list(set(all_array_tuples))
+    return all_array_tuples
 
 def turn_to_numbers(filename):
     """
@@ -97,5 +97,11 @@ def get_number_price():
 
     return final_array
 
-get_number_price()
+def write_to_file():
+    with open('solution.txt', 'w') as f:
+        for item in get_number_price():
+            f.write("%s\n" % item)
+
+
+write_to_file()
 
